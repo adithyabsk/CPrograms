@@ -146,7 +146,7 @@ int main(void)
 				if(fgets(input, max_digits, stdin) == NULL) break;
 				else continue;
 			}
-			if(isalpha(input[0]))
+			if(!isdigit(input[0]))
 				calculate(nums, input[0]);
 			else
 			{
