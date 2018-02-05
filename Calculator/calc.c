@@ -1,3 +1,4 @@
+// TODO Add comments and header
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
@@ -141,12 +142,12 @@ int main(void)
 	{
 		while(EOF!=input[0])
 		{
-			if(input[0] == '\0')
+			if(input[0] == '\0' || input[0] == '\n')
 			{
 				if(fgets(input, max_digits, stdin) == NULL) break;
 				else continue;
 			}
-			if(!isdigit(input[0]))
+			if(!isdigit(input[0]) && input[0] != '-')
 				calculate(nums, input[0]);
 			else
 			{
