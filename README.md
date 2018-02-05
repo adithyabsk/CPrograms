@@ -58,8 +58,9 @@ $ ./hello
 ```
 
 ## Calculator
-A calculator program that works much like many of the simple calculators you can find on your phone. Run the program and type h to get a list of available operations.
+![CalculatorDemo](Media/CalculatorDemo.gif "Demo of Calculator program")  
+A calculator program that works much like many of the simple calculators you can find on your phone. Run the program and type h to get a list of available operations. Pass sample_input.txt to test the code as seen in the demo.
 ```bash
 $ make
-$ ./calc
+$ ./calc < sample_input.txt
 ```
