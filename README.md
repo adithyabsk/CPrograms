@@ -1,6 +1,21 @@
 # C Programming
 A Survey of C Programs
-# Makefile Explanation
+## Hello World
+The most basic C program. Prints Hello World! to console. In order to build and run:
+```bash
+$ make
+$ ./hello
+```
+
+## Calculator
+![CalculatorDemo](Media/CalculatorDemo.gif "Demo of Calculator program")  
+A calculator program that works much like many of the simple calculators you can find on your phone. Run the program and type h to get a list of available operations. Pass sample_input.txt to test the code as seen in the demo.
+```bash
+$ make
+$ ./calc < sample_input.txt
+```
+
+# Addendum: Makefile Explanation
 Source: https://www.gnu.org/software/make/manual/make.html  
 To simply use the attached makefile for your programs, replace the target with the main file in your c program. 
 Makefiles allow you to build c programs. It is important to understand the makefile used to override the default setup line by line. Note that make decides which files to build and update based on last-edit time each successive time you run the command. Make has a list of default rules that it follows if you do not specify a makefile. You can view these rules by running:
@@ -47,20 +62,4 @@ The last rule, **clean**, is not run by default but when run, it cleans up the g
 clean:
     -rm -f *.o
     -rm -f $(TARGET)
-```
-
-# C Program List
-## Hello World
-The most basic C program. Prints Hello World! to console. In order to build and run:
-```bash
-$ make
-$ ./hello
-```
-
-## Calculator
-![CalculatorDemo](Media/CalculatorDemo.gif "Demo of Calculator program")  
-A calculator program that works much like many of the simple calculators you can find on your phone. Run the program and type h to get a list of available operations. Pass sample_input.txt to test the code as seen in the demo.
-```bash
-$ make
-$ ./calc < sample_input.txt
 ```
