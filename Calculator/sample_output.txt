@@ -1,0 +1,41 @@
+Calculator Usage Help:
+Note: earlier refers to the first input value
+      later refers to the second input value
+      values refers to both of them
+x: multiplies the values --> later *= earlier
+d: divides the values --> later /= earlier
+   Note: divide by zero error is caught and printed
+a: adds the values --> later += earlier
+s: subtracts the values --> later -= earlier
+^: exponentiates the values --> later = pow(later, earlier)
+l: computes the logarithm of the values --> later = log(later, earlier)
+   Note: both values must be positive and error is caught
+w: swaps earlier and later
+c: clears the values setting them to 0.
+t: truncates the values (cast to int)
+b: performs t and prints the values
+p: prints the values in double precision
+h: prints this help message
+q: quits the program
+=6.000
+=3.000
+=1.000
+=5.000
+5.000
+5.000
+0.000
+0.000
+=0.250
+=2.000
+=8.000
+8.000
+5.000
+=11.000
+-10.500
+10.500
+-10.000
+10.000
+11111111111111111111111111110110
+1010
+-10.000
+10.000
