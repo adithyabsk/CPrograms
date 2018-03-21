@@ -1,3 +1,9 @@
+/* tracker --- A simple gps fix smoothing algorithm
+ * Usage --- ./gps
+ * Adithya Balaji, 03-21-2018
+ * Tested on an EOS Linux System
+ */
+
 #include <stdio.h>
 #include <math.h>
 

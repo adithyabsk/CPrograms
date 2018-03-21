@@ -1,7 +1,7 @@
 /* calc --- A simple calculator with multiple features
  * Usage --- ./calc
  * Adithya Balaji, 02-05-2018
- * Tested on a EOS Linux System
+ * Tested on an EOS Linux System
  */
 
 #include <ctype.h>
