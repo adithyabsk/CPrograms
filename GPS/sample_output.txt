@@ -1,0 +1,5 @@
+Total distance = 66.47
+Peak speed = 15.06
+# of changes in direction = 7
+# of changes in road = 2
+First Road = 1, Last Road = 1

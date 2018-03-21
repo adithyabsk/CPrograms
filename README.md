@@ -16,6 +16,18 @@ $ ./calc < sample_input.txt > temp_output.txt
 $ cmp -s temp_output.txt sample_output.txt && echo 'Files are identical' || echo 'Files have differences, use diff to view them'
 ```
 
+## GPS
+![GPSDemo](Media/GPSDemo.gif "Demo of GPS program")  
+A program that takes the inputs of a series of points (simulated GPS data) and computes the way points, distance traveled, and speed information for the specific delta time with regards to an internally defined set of roads.
+```bash
+$ make
+$ ./tracker < sample_input.txt > temp_output.txt
+$ cmp -s temp_output.txt sample_output.txt && echo 'Files are identical' || echo 'Files have differences, use diff to view them'
+```
+### Example explanation
+![GPSDesmos](Media/GPSDesmos.png "Annotated Desmos plot of GPS point fixes")  
+The above plot shows the example two roads, y = -x (road one) and y = x (road two). The input gps fix points are attributed to their respective road through a normalization process by finding the closest road to that point. The path of the car is then tracked and statistics are computed.
+
 # Addendum: Makefile Explanation
 Source: https://www.gnu.org/software/make/manual/make.html  
 To simply use the attached makefile for your programs, replace the target with the main file in your c program. 
