@@ -65,7 +65,7 @@ void set_line_params(int road, double *m, double *b)
  *	Returns:
  *		(double) the x value of the point on the nearest road
  */
-double nearest_point_on_road(int road, double x, double y)
+double nearest_point_on_road(double x, double y, int road)
 {
 	double m_road = 0., b_road = 0.;
 	set_line_params(road, &m_road, &b_road);
@@ -110,7 +110,7 @@ double distance_to_road(int road, double x, double y)
  *	Returns:
  *		(int) The enum  of the closest road
  */
-int closest_road(int road, double x, double y)
+int closest_road(double x, double y, int road)
 {
 	if (distance_to_road(road, x, y) < 0.001) return road;
 	else {
@@ -135,16 +135,16 @@ void track(double time, double x, double y)
 
 	if(count == 0)
 	{
-		Road = First_road = closest_road(1, x, y);
-		prior_x = nearest_point_on_road(First_road, x, y);
+		Road = First_road = closest_road(x, y, 1);
+		prior_x = nearest_point_on_road(x, y, First_road);
 
 	} else {
 		double prior_m_road = 0., prior_b_road = 0.;
 		set_line_params(Road, &prior_m_road, &prior_b_road);
-		int curr_road = closest_road(Road, x, y);
+		int curr_road = closest_road(x, y, Road);
 		double curr_m_road = 0., curr_b_road = 0.;
 		set_line_params(curr_road, &curr_m_road, &curr_b_road);
-		double curr_x = nearest_point_on_road(curr_road, x, y);
+		double curr_x = nearest_point_on_road(x, y, curr_road);
 		double dist = 0.;
 
 		if(curr_road == Road)
