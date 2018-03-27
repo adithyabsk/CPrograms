@@ -112,7 +112,7 @@ double distance_to_road(int road, double x, double y)
  */
 int closest_road(double x, double y, int road)
 {
-	if (distance_to_road(road, x, y) < 0.001) return road;
+	if (distance_to_road(road, x, y) < 0.0001) return road;
 	else {
 		double road_one_dist = distance_to_road(1, x, y);
 		double road_two_dist = distance_to_road(2, x, y);
