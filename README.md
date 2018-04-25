@@ -1,4 +1,4 @@
-# C Programming
+# C Programs
 A Survey of C Programs
 ## Hello World
 The most basic C program. Prints Hello World! to console. In order to build and run:
@@ -27,6 +27,15 @@ $ cmp -s temp_output.txt sample_output.txt && echo 'Files are identical' || echo
 ### Example explanation
 ![GPSDesmos](Media/GPSDesmos.png "Annotated Desmos plot of GPS point fixes")  
 The above plot shows the example two roads, y = -x (road one) and y = x (road two). The input gps fix points are attributed to their respective road through a normalization process by finding the closest road to that point. The path of the car is then tracked and statistics are computed.
+
+## Sudoku
+![SudokuDemo](Media/SudokuDemo.gif "Demo of Sudoku program")  
+A program that allows the user to play a game of sudoku.
+```bash
+$ make
+$ ./tester # check test cases
+$ ./terminal # play sudoku (use the provided files easy.sko, med.sko, hard.sko)
+```
 
 # Addendum: Makefile Explanation
 Source: https://www.gnu.org/software/make/manual/make.html  
